@@ -1,0 +1,153 @@
+
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+// header css start 
+.header{
+  // height: 7.25rem;
+  .header-wrap{
+    border-bottom: 1px solid darken($color: $light, $amount: 7);
+    padding: 26px 0;
+    .search-lg{
+      input{font-size: 1rem; border: none; color: darken($color: $light, $amount: 18); 
+        &:focus{border-bottom: 1px solid darken($color: $light, $amount: 7);}
+      }
+      .search-btn{
+        border: none;
+        color: darken($color: $light, $amount: 24);
+        background: none;
+      }
+    }
+    .logo-lg{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%);
+      transform: translateY(-50%);
+    }
+    .user-items{
+      font-size: 1.5rem;
+      color: darken($color: $primary, $amount: 10);
+      a{color: darken($color: $primary, $amount: 10);}
+      .badge{
+        width: 1.4rem;
+        height: 1.4rem;
+        text-align: center;
+        background: $primary;
+        font-size: .75rem;
+        font-weight: 400;
+        padding-top: 5px;
+        left: 50%;
+        bottom: 0;
+      }
+    }
+  }
+  
+}
+// navbar css start
+.navbar{
+    background-color: $white;
+    .navbar-toggler:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    .offcanvas{
+        width: 250px !important;
+        
+    }
+}
+
+// nav bottom
+.nav-bottom{
+  border-top: 1px solid lighten($color: $dark, $amount: 77) !important;
+  border-top: 1px solid $primary !important;
+  height: 3.3rem !important;
+  margin-left: -2.5rem ;
+
+  .active{
+      border-top: 2px solid $primary;
+      padding: .6rem 0rem;
+      font-weight: 500;
+      margin-top: -.75rem;
+      color: $primary !important;
+  }
+  ul{
+      margin-top: .5rem;
+      .nav-item{
+          width: 3.5rem;
+          .nav-link{
+            font-size: .75rem;
+            transition: .4s;
+            &:hover{
+              i{color: $primary;}
+            }
+            span{
+              font-size: .72rem !important;
+            }
+          }
+      }
+  }
+}
+
+
+
+// media start 
+@media (min-width: 992px) {
+  // .navbar{
+  //   .search{
+  //     display: none;
+  //   }
+  // }
+  .nav-bottom{
+      display: none;
+  }
+  .hidden-lg{display: none;}
+}
+
+@media (max-width: 992px) {
+    .visible-lg{display: none ;}
+}
+
+
+
+
+
+
+
+
+
+
+// @media (max-width: 576px){
+//   .navbar{
+//     .offcanvas{
+//       .search{
+//         width: 200px;
+//         margin-left: 0%;
+//         margin: 1rem 0;
+//       }
+//       .singin{
+//         margin-top: 1rem;
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 768px){
+//   .navbar{
+//     .brand-logo{
+//       height: 2.5rem !important;
+//     }
+//     .offcanvas{
+//       .search{
+//         width: 200px;
+//         margin-left: 0%;
+//         margin: 1rem 0;
+//       }
+//     }
+//   }
+// }
+
+
+
+
