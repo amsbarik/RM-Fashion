@@ -1,17 +1,21 @@
+@use "../base/index" as *;
+@use "../partials/variables" as *;
+
 
 .slider-container {
     position: relative;
     // width: 80%;
-    overflow: hidden;
+    // overflow: hidden;
     margin: 0 auto;
     .slider-wrapper {
         display: flex;
-        transition: transform 0.5s ease-in-out;
+        // transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease;
         .product-card {
-            flex: 0 0 calc(25% - 10px); /* Adjust card width minus margin */
-            max-width: calc(25% - 10px); /* 100% / 5 = 20% */
+            flex: 0 0 calc(20% - 10px); /* Adjust card width minus margin */
+            max-width: calc(20% - 10px); /* 100% / 5 = 20% */
             box-sizing: border-box;
-            margin: 0 8px; /* Adjust margin */
+            margin: 0 12px; /* Adjust margin */
             /* height: 200px; */
         }
     }
