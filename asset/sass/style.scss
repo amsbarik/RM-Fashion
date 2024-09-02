@@ -8,10 +8,57 @@
 
 
 
+.bg-img{
+    background-image: url(../img/bg-img.jpeg);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+// top slide css start 
+.top-slide{
+    background: $bg-white;
+    .top-slide-wrap{
+        .slide-img{
+            height: 40rem;
+            object-fit: cover;
+        }
+
+        .shipping{
+            img{
+                width: auto;
+                height: 6.25rem;
+            }
+        }
+    }
+}
 
 
-
-
+// categories css start 
+.categories{
+    background: $bg-white;
+    .slider-container{
+        .slider-wrapper{
+            .product-card{
+                height: 14rem;
+                img{
+                    width: 100%;
+                    height: 100% ;
+                    object-fit: cover;
+                }
+                .btn{
+                    bottom: 1rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
 
 
 
