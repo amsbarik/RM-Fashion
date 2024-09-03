@@ -103,6 +103,42 @@
 }
 
 
+// slider-3items start 
+.slider-3items{
+    .slider-3items-wrap{
+        background: $bg-deep;
+        .slide-thum-img{
+            width: 100%;
+            height: 32.4rem;
+            object-fit: cover
+        }
+
+        
+    }
+}
+
+// product-gllery css start 
+.product-gllery{
+    .product-gllery-wrap{
+        .gallery-img-lg{
+            width: 100%;
+            height: 27.46rem;
+            object-fit: cover;
+        }
+        .gallery-img-sm{
+            width: 100%;
+            height: 13.25rem;
+            object-fit: cover;
+        }
+        .gallery-img-md{
+            width: 100%;
+            height: 50.625rem;
+            object-fit: cover;
+        }
+    }
+}
+
+
 
 
 
