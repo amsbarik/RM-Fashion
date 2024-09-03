@@ -1,0 +1,233 @@
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+//  filter css start 
+
+.products-store{
+    background: $light;
+}
+
+.filter-wrap{box-shadow: $shadow; background: $bg-white;}
+
+.filter{
+    font-size: 18px;
+}
+
+.reset-btn{
+    // color: red;
+    font-size: 14px;
+}
+.reset-btn:hover{
+    color: $danger;
+}
+.filter-wrap hr{
+    opacity: 12% !important;
+}
+.filter-box {
+    height: 178px;
+    overflow: hidden;
+}
+.filter-box h5 {
+    font-size: 14px;
+}
+.filter-box label, span {
+    font-size: 13px;
+    margin-top: 3px;
+    color: $dark;
+    transition: .3s;
+}
+.filter-box label:hover {
+    color: $primary;
+}
+
+.filter-box.show {
+    height: auto;
+}
+
+.filter-items {
+    position: relative;
+    overflow: hidden;
+}
+
+.readmore {
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    left: 0;
+    background: $white;
+    color: $primary;
+    cursor: pointer;
+}
+
+.readmore::before {
+    content: attr(data-more)
+}
+
+.filter-box.show .readmore {
+    position: relative;
+    top: auto;
+    display: block;
+}
+
+.filter-box.show .readmore::before {
+    content: attr(data-less)
+}
+
+input:checked{
+background-color: $primary !important;
+border:0;
+}
+
+/* price-range start*/
+.price-range h5, .search-property h5{
+    font-size: 14px;
+}
+.search-property input{
+    font-size: 13px;
+    border-radius: 5px 0px 0px 5px;
+
+}
+.search-property input:focus{
+    border: 1px solid $primary;
+}
+.search-property .btn{
+    border: 1px solid darken($color: $light, $amount: 10);
+    border-radius: 0px 5px 5px 0px;
+    border-left: 0px;
+    transition: .3s;
+    color: $primary;
+}
+.search-property .btn:hover{
+    border: 1px solid $primary;
+}
+.price-input-container { 
+    width: 100%; 
+} 
+
+.price-input .price-field { 
+    display: flex; 
+    margin-bottom: 22px; 
+} 
+
+.price-field label { 
+    margin-right: 10px; 
+    margin-top: 6px; 
+    font-size: 13px;
+    color: $dark;
+} 
+
+.price-field input { 
+    flex: 1; 
+    font-size: 13px;
+    color: $dark;
+    border-radius: 4px;
+    text-align: center;  
+    border: 1px solid darken($color: $light, $amount: 10); 
+    width: 92px;
+    /* background: #e4e4e4;  */
+} 
+.price-field input:focus{
+    border: 1px solid $primary;
+    outline: none;
+
+}
+
+.price-input { 
+    width: 100%; 
+    font-size: 19px; 
+    color: $primary; 
+} 
+
+
+/* Remove Arrows/Spinners */
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+} 
+
+.slider-container { 
+    width: 100%; 
+} 
+
+.slider-container { 
+    height: 2px; 
+    position: relative; 
+    background: darken($color: $light, $amount: 10); 
+    border-radius: 5px; 
+} 
+
+.slider-container .price-slider { 
+    height: 100%; 
+    left: 0%; 
+    right: 15%; 
+    position: absolute; 
+    border-radius: 5px; 
+    background: $primary; 
+} 
+
+.range-input { 
+    position: relative; 
+} 
+
+.range-input input { 
+    position: absolute; 
+    width: 100%; 
+    height: 4px; 
+    background: none; 
+    top: -4px; 
+    pointer-events: none; 
+    cursor: pointer; 
+    -webkit-appearance: none; 
+} 
+
+/* Styles for the range thumb in WebKit browsers */
+input[type="range"]::-webkit-slider-thumb { 
+    height: 16px; 
+    width: 16px; 
+    border-radius: 70%; 
+    background: $light; 
+    border: 2px  solid $primary;
+    pointer-events: auto; 
+    -webkit-appearance: none; 
+} 
+input[type="range"]::-webkit-slider-thumb:hover { 
+    height: 22px; 
+    width: 22px; 
+} 
+
+@media screen and (max-width: 768px) { 
+    .main { 
+        width: 80%; 
+        margin-right: 5px; 
+    } 
+
+    .custom-wrapper { 
+        width: 100%; 
+        left: 0; 
+        padding: 0 10px; 
+    } 
+
+    .projtitle { 
+        width: 100%; 
+        position: relative; 
+        right: 26px; 
+    } 
+
+    .price-input { 
+        flex-direction: column; 
+        align-items: center; 
+    } 
+
+    .price-field { 
+        margin-bottom: 10px; 
+    } 
+}
+/* price-range end*/
+
+
+
+
+
+

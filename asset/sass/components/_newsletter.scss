@@ -1,0 +1,10 @@
+
+@use "../base/index" as *;
+@use "../partials/variables" as *;
+
+.newsletter-card{
+    box-shadow: $shadow;
+    .form-control{
+        min-width: 21rem;
+    }
+}

@@ -1,0 +1,34 @@
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+.footer{
+    background: $dark;
+    .footer-wrap{
+        color: $light;
+        .logo{
+            height: 7rem;
+        }
+        .mobile{
+            color: $primary;
+            font-size: 1.5rem;
+            font-weight: $semibold;
+        }
+        .social-link{
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            a{color: $primary; margin-right: .75rem;}
+        }
+        .contact{
+            li{margin-top: .5rem; font-size: .875rem;
+            a{color: $light;}
+            }
+        }
+
+        .photo-link{
+            width: 19rem;
+        }
+
+        .payment-img{width: 100%;}
+    }
+}
