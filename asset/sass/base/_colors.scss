@@ -17,7 +17,7 @@ $light: #fafafa;
 $heading-color: $dark;
 $title-color: $dark;
 $sub-title-color: $dark;
-$text-color: $dark;
+$text-color: lighten($color: $dark, $amount: 20);
 $small-text-color: $dark;
 
 // background color 
