@@ -1,0 +1,100 @@
+
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+
+.product-details{
+    .product-details-wrap{
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    }
+}
+
+
+.product-description{
+    .nav-item{
+        position: relative;
+        .nav-link{
+            color: $primary;
+            padding: 0 1.5rem .5rem 0;
+            font-size: 1.2rem;
+            font-weight: $semibold;
+        }
+        .nav-link.active{
+            background: $white ;
+            color: $dark;
+            border-radius: 0;
+            &::after{
+                content: "";
+                background: $primary;
+                width: 4rem;
+                height: 2px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+// product thum slider start 5 items
+.thum-slider-container {
+    position: relative;
+    // width: 300px; 
+    margin: auto;
+
+    .thum-slider-wrapper {
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease;
+        overflow: hidden;
+        height: 500px; /* Adjust height as needed */
+        .product-thum-card {
+            flex: 0 0 auto; /* Ensure each card takes up the necessary space */
+            margin: 8px 0; /* Vertical margin for spacing */
+            height: 120px; /* Adjust height as needed */
+
+            .product-thum-img{
+                width: 100%;
+            }
+        }
+    }
+
+    .prev-btn, .next-btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #dcb75280;
+        color: white;
+        border: none;
+        padding: 2px 6px 6px 6px ;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 24px;
+
+    }
+    .prev-btn {
+        top: -40px;
+    }
+    .next-btn {
+        bottom: -40px;
+    }
+}

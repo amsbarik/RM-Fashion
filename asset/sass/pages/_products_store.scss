@@ -147,18 +147,18 @@ input::-webkit-inner-spin-button {
     margin: 0; 
 } 
 
-.slider-container { 
+.price-slider-range { 
     width: 100%; 
 } 
 
-.slider-container { 
+.price-slider-range { 
     height: 2px; 
     position: relative; 
     background: darken($color: $light, $amount: 10); 
     border-radius: 5px; 
 } 
 
-.slider-container .price-slider { 
+.price-slider-range .price-slider { 
     height: 100%; 
     left: 0%; 
     right: 15%; 
