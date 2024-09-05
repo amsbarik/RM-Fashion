@@ -4,51 +4,142 @@
 
 
 
-.product-details{
+.ptoduct-details{
     .product-details-wrap{
 
+        .product-images{
 
-
-
-
-
-
-
-
-
-
-
-        
-    }
-}
-
-
-.product-description{
-    .nav-item{
-        position: relative;
-        .nav-link{
-            color: $primary;
-            padding: 0 1.5rem .5rem 0;
-            font-size: 1.2rem;
-            font-weight: $semibold;
         }
-        .nav-link.active{
-            background: $white ;
-            color: $dark;
-            border-radius: 0;
-            &::after{
-                content: "";
-                background: $primary;
-                width: 4rem;
-                height: 2px;
-                position: absolute;
-                left: 0;
-                bottom: 0;
+
+        .product-info{
+            .product-title{
+                color: $dark;
+                font-size: 1.5rem;
+            }
+            .price{color: $dark; span{font-size: 1rem;}}
+            .rating{
+                color: $dark;
+                i{color: $primary;}
+            }
+            .color-select{
+                .color-name{color: lighten($color: $dark, $amount: 20); font-weight: $medium;}
+                .color-item {
+                    border: 1px solid $primary;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    padding: .12rem;
+                    .color-img{
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+                }
+                .color-item.active {
+                    border: 2px solid $dark ;
+                }
+            }
+
+            // size select 
+            .size-select{
+                .size-list{
+                    .size-item {
+                        border: 1px solid $primary;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        padding: .1rem;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    .size-text {
+                        font-size: 1rem;
+                        display: block;
+                        margin-top: 5px;
+                    }
+                    .size-item.active {
+                        background: $primary;
+                        .size-text{color: $white ;}
+                    }
+                }
+            }
+
+            // qty-select 
+            .qty-select{
+                .qty-controls {
+                    .qty-input {
+                        text-align: center;
+                        width: 3rem;
+                        color: $dark;
+                    }
+                    
+                    .qty-minus, .qty-plus {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        text-align: center;
+                        color: lighten($color: $dark, $amount: 50);
+                    }
+    
+                }
+            }
+            
+            .btn-primary{
+                box-shadow:  $shadow;
+            }
+            .call-img{
+                width: 18rem;
+            }
+            .share-to{
+                .btn{
+                    color: $primary;
+                    padding: 0;
+                    margin-right: 1rem;
+                }
+            }
+           
+    
+            
+        }
+        
+
+        .product-description{
+            .nav-item{
+                position: relative;
+                .nav-link{
+                    color: $primary;
+                    padding: 0 1.5rem .5rem 0;
+                    font-size: 1.2rem;
+                    font-weight: $semibold;
+                }
+                .nav-link.active{
+                    background: $white ;
+                    color: $dark;
+                    border-radius: 0;
+                    &::after{
+                        content: "";
+                        background: $primary;
+                        width: 4rem;
+                        height: 2px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+                
             }
         }
+
+       
+
+
+
         
     }
 }
+
+
+
+
+
+
 
 
 
@@ -98,3 +189,11 @@
         bottom: -40px;
     }
 }
+
+
+
+
+
+
+
+

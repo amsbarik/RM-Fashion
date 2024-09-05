@@ -14,6 +14,10 @@
 
     <title>Product Details | RM Fashion</title>
 
+
+
+
+
 </head>
 <body class="bg-im ">
     
@@ -130,9 +134,11 @@
 
     <!-- main content start -->
     <main>
+        <!-- ptoduct-details start  -->
         <section class="ptoduct-details mt-4 mb-5">
             <div class="container">
                 <div class="product-details-wrap">
+
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -184,26 +190,104 @@
                             </div>
                         </div>
 
+                        <!-- product-info  -->
                         <div class="col">
                             <div class="product-info">
                                 <h1 class="product-title">ELITE Quality Embroidered Panjabi I MP-50</h1>
-                                <h2>Tk. 2990 <span class="text-decoration-line-through text-danger">3450</span></h2> 
+                                <h2 class="my-3 price">Tk. 2990 <span class="text-decoration-line-through text-danger">3450</span></h2> 
 
                                 <div class="rating">
                                     0.0 <i class="fa-solid fa-star"></i> | 0 Reviews
                                 </div>
                                 <hr class="">
 
+                                <div class="row">
+                                    <div class="col-auto"><h5>COLOR:</h5></div>
+
+                                    <div class="col-auto color-select">
+                                        <h5 class="color-name">Red</h5>
+                                        <div class="color-list d-flex mt-3">
+                                            <div class="color-item me-3 rounded active" data-color="Red">
+                                                <img src="asset/img/product1.jpeg" alt="Red" class="color-img rounded object-fit-cover">
+                                            </div>
+                                            <div class="color-item me-3 rounded" data-color="Blue">
+                                                <img src="asset/img/product2.jpeg" alt="Blue" class="color-img rounded object-fit-cover">
+                                            </div>
+                                            <div class="color-item me-3 rounded" data-color="Green">
+                                                <img src="asset/img/product3.jpeg" alt="Green" class="color-img rounded object-fit-cover">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- size start  -->
+                                <div class="row mt-4">
+
+                                    <div class="col-auto">
+                                        <h5>SIZE:</h5>
+                                    </div>
+
+                                    <div class="col-auto size-select">
+                                        
+                                        <div class="size-list d-flex mt-3">
+                                            <div class="size-item me-3 rounded-circle active" data-qty="12">
+                                                <span class="size-text">S</span>
+                                            </div>
+                                            <div class="size-item me-3 rounded-circle" data-qty="8">
+                                                <span class="size-text">M</span>
+                                            </div>
+                                            <div class="size-item me-3 rounded-circle" data-qty="5">
+                                                <span class="size-text">L</span>
+                                            </div>
+                                            <div class="size-item me-3 rounded-circle" data-qty="3">
+                                                <span class="size-text">XL</span>
+                                            </div>
+                                            <div class="size-item me-3 rounded-circle" data-qty="3">
+                                                <span class="size-text">XXL</span>
+                                            </div>
+                                        </div>
+
+                                        <h6 class="size-qty text-muted mt-3"><span class="available-qty">100</span> available</h6>
+                                    </div>
+                                    
+                                </div>
+
+                                <hr>
+
+                                <!-- qty start  -->
+                                <div class="row mt-3">
+                                    <div class="col-auto qty-select me-5">
+                                        <div class="qty-controls border rounded d-flex align-items-center">
+                                            <button class="btn qty-minus">-</button>
+                                            <input type="text" class="form-control qty-input mx-1 border-0" value="1" readonly>
+                                            <button class="btn qty-plus">+</button>
+                                        </div>
+                                    </div>
+
+                                    <button class="col-auto btn btn-white me-4 px-5" type="submit">Add to Card</button>
+                                    <button class="col-auto btn btn-primary px-5" type="submit">Order Now</button>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="btn p-0 text-muted mt-4"><i class="fa-regular fa-bookmark me-2"></i>ADD TO WISHLIST</button>
+                                    <img src="asset/img/call.png" class="call-img d-block mt-3" alt="">
+
+                                    <div class="share-to d-flex mt-3">
+                                        <small class="text-muted me-3">Share To:</small>
+                                        <ul class="d-flex" style="margin-top: -3px;">
+                                            <li><button type="submit" class="btn"><i class="fa-brands fa-facebook"></i></button></li>
+                                            <li><button type="submit" class="btn"><i class="fa-brands fa-whatsapp"></i></button></li>
+                                            <li><button type="submit" class="btn"><i class="fa-brands fa-facebook-messenger"></i></button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+
                             </div>
                         </div>
 
-
-
-
-
                     </div>
-
-
 
                     <!-- description and policy  -->
                     <div class="product-description mt-5">
@@ -263,6 +347,8 @@
                 </div>
             </div>
         </section>
+        <!-- ptoduct-details end  -->
+
 
 
         <!-- Releted Products start  -->
@@ -479,7 +565,79 @@
    <script src="asset/js/app.js"></script>
 
 
-  
+  <!-- color select js start  -->
+<script>
+    document.querySelectorAll('.color-img').forEach(function(img) {
+    img.addEventListener('click', function() {
+        // Remove active class from all items
+        document.querySelectorAll('.color-item').forEach(function(item) {
+            item.classList.remove('active');
+        });
+
+        // Add active class to the clicked item
+        const parentItem = this.closest('.color-item');
+        parentItem.classList.add('active');
+
+        // Update the color name based on the clicked item
+        const colorName = parentItem.getAttribute('data-color');
+        document.querySelector('.color-name').textContent = colorName;
+        });
+    });
+
+</script>
+
+
+<!-- size select js start  -->
+<script>
+    document.querySelectorAll('.size-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+        // Remove active class from all items
+        document.querySelectorAll('.size-item').forEach(function(sizeItem) {
+            sizeItem.classList.remove('active');
+        });
+
+        // Add active class to the clicked item
+        this.classList.add('active');
+
+        // Update the quantity based on the clicked item
+        const sizeQty = this.getAttribute('data-qty');
+        document.querySelector('.size-qty').textContent = `${sizeQty} available`;
+    });
+});
+
+</script>
+
+
+<!-- qty select js start  -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const minusBtn = document.querySelector('.qty-minus');
+    const plusBtn = document.querySelector('.qty-plus');
+    const qtyInput = document.querySelector('.qty-input');
+    const availableQty = parseInt(document.querySelector('.available-qty').textContent, 10);
+
+    // Minimum quantity allowed
+    const minQty = 1;
+
+    // Decrement quantity
+    minusBtn.addEventListener('click', function () {
+        let currentQty = parseInt(qtyInput.value, 10);
+        if (currentQty > minQty) {
+            qtyInput.value = currentQty - 1;
+        }
+    });
+
+    // Increment quantity
+    plusBtn.addEventListener('click', function () {
+        let currentQty = parseInt(qtyInput.value, 10);
+        if (currentQty < availableQty) {
+            qtyInput.value = currentQty + 1;
+        }
+    });
+});
+
+ </script>
+
 
 </body>
 </html>
