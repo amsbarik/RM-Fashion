@@ -351,7 +351,7 @@ for (let i = 0; i < rangeInputvalue.length; i++) {
 
 
 ///////////////////////////////// product details page js start
-// product more img slider js start 
+// product thum img slider js start 
 document.querySelectorAll('.thum-slider-wrapper').forEach((sliderWrapper, index) => {
     const productCards = sliderWrapper.querySelectorAll('.product-thum-card');
     const prevBtn = sliderWrapper.closest('.thum-slider-container').querySelector('.prev-btn');
@@ -360,12 +360,12 @@ document.querySelectorAll('.thum-slider-wrapper').forEach((sliderWrapper, index)
     let slideInterval;
 
     function slideTo(index) {
-        const cardHeight = productCards[0].offsetHeight + 16; // Adjust according to product-thum-card css margin 8*2=16 (margin: 8px 0;)
+        const cardHeight = productCards[0].offsetHeight + 12; // Adjust according to product-thum-card css margin 8*2=16 (margin: 8px 0;)
         const translateYValue = -(index * cardHeight); // Regular translation for full cards
         sliderWrapper.style.transform = `translateY(${translateYValue}px)`;
 
         // Adjust for 30% of the next card on the bottom
-        if (index < productCards.length - 4) {
+        if (index < productCards.length - 5) {
             sliderWrapper.style.transform += `translateY(-${cardHeight * 0.2}px)`;
         }
 
@@ -373,7 +373,7 @@ document.querySelectorAll('.thum-slider-wrapper').forEach((sliderWrapper, index)
     }
 
     function nextSlide() {
-        if (currentIndex < productCards.length - 4) {
+        if (currentIndex < productCards.length - 5) {
             slideTo(currentIndex + 1);
         } else {
             slideTo(0);
@@ -384,7 +384,7 @@ document.querySelectorAll('.thum-slider-wrapper').forEach((sliderWrapper, index)
         if (currentIndex > 0) {
             slideTo(currentIndex - 1);
         } else {
-            slideTo(productCards.length - 4);
+            slideTo(productCards.length - 5);
         }
     }
 
@@ -404,4 +404,97 @@ document.querySelectorAll('.thum-slider-wrapper').forEach((sliderWrapper, index)
 
     startAutoSlide();
     slideTo(0); // Start with the first card showing
+});
+
+
+
+
+
+// <!-- product view img js start  -->
+document.addEventListener('DOMContentLoaded', function () {
+// Main product view image
+const productViewImg = document.querySelector('.product-view-img');
+
+// Thumbnail images
+const thumbImgs = document.querySelectorAll('.product-thum-img');
+
+// Add click event listeners to each thumbnail image
+thumbImgs.forEach(function (thumbImg) {
+    thumbImg.addEventListener('click', function () {
+        // Update the main product view image with the clicked thumbnail's src
+        productViewImg.src = this.src;
+        });
+    });
+});
+
+
+
+
+// <!-- color select js start  -->
+document.querySelectorAll('.color-img').forEach(function(img) {
+img.addEventListener('click', function() {
+    // Remove active class from all items
+    document.querySelectorAll('.color-item').forEach(function(item) {
+        item.classList.remove('active');
+    });
+
+    // Add active class to the clicked item
+    const parentItem = this.closest('.color-item');
+    parentItem.classList.add('active');
+
+    // Update the color name based on the clicked item
+    const colorName = parentItem.getAttribute('data-color');
+    document.querySelector('.color-name').textContent = colorName;
+    });
+});
+
+
+
+// <!-- size select js start  -->
+
+document.querySelectorAll('.size-item').forEach(function(item) {
+item.addEventListener('click', function() {
+    // Remove active class from all items
+    document.querySelectorAll('.size-item').forEach(function(sizeItem) {
+        sizeItem.classList.remove('active');
+    });
+
+    // Add active class to the clicked item
+    this.classList.add('active');
+
+    // Update the quantity based on the clicked item
+    const sizeQty = this.getAttribute('data-qty');
+    document.querySelector('.size-qty').textContent = `${sizeQty} available`;
+    });
+});
+
+
+
+
+// <!-- qty select js start  -->
+
+document.addEventListener('DOMContentLoaded', function () {
+const minusBtn = document.querySelector('.qty-minus');
+const plusBtn = document.querySelector('.qty-plus');
+const qtyInput = document.querySelector('.qty-input');
+const availableQty = parseInt(document.querySelector('.available-qty').textContent, 10);
+
+// Minimum quantity allowed
+const minQty = 1;
+
+// Decrement quantity
+minusBtn.addEventListener('click', function () {
+    let currentQty = parseInt(qtyInput.value, 10);
+    if (currentQty > minQty) {
+        qtyInput.value = currentQty - 1;
+    }
+});
+
+// Increment quantity
+plusBtn.addEventListener('click', function () {
+    let currentQty = parseInt(qtyInput.value, 10);
+    if (currentQty < availableQty) {
+        qtyInput.value = currentQty + 1;
+    }
+    });
 });
