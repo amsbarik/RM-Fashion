@@ -5,6 +5,7 @@
 
 // header css start 
 header{background: $bg-white;}
+
 .header{
   // height: 7.25rem;
   .header-wrap{
@@ -46,6 +47,7 @@ header{background: $bg-white;}
   }
   
 }
+
 // navbar css start
 .navbar{
     background-color: $white;
@@ -54,10 +56,65 @@ header{background: $bg-white;}
         box-shadow: none !important;
     }
     .offcanvas{
-        width: 250px !important;
+        width: 250px;
+        .main-categories{
+            
+            .nav-item{
+                font-size: .875rem;
+                font-weight: $semibold;
+                padding: 12px 0;
+                position: relative;
+                .nav-link{
+                    color: $dark;
+                    letter-spacing: 2px;
+                    i{font-size: .75rem;}
+                    transition: 0.3s;
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+                &:hover{
+                    .sub-categories{
+                        display: block;
+                    }
+                }
+
+                .sub-categories{
+                    position: absolute;
+                    left: 0;
+                    top: 44px;
+                    z-index: 100;
+                    background: $bg-white;
+                    border: 1px solid darken($color: $light, $amount: 10);
+                    padding: .5rem 1rem;
+                    border-radius: .15rem;
+                    width: 20rem;
+                    display: none;
+                    
+                    .sub-item{
+                        border-bottom: 1px dotted lighten($color: $dark, $amount: 20);
+                        font-size: .875rem;
+                        padding: .5rem 0;
+                        font-weight: $medium;
+                        a{color: $dark ; transition: .3s;
+                            &:hover{
+                                color: $primary;
+                            }
+                        }
+                        &:last-child{
+                            border-bottom: none;
+                        }
+                        
+                        
+                    }
+                }
+            }
+        }
         
     }
 }
+
+
 
 // nav bottom
 .nav-bottom{
