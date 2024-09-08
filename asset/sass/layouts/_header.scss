@@ -57,7 +57,24 @@ header{background: $bg-white;}
         box-shadow: none !important;
     }
     .offcanvas{
-        width: 250px;
+        .btn-close:focus{
+            outline: none;
+            box-shadow: none;
+            font-size: .8rem !important;
+        }
+       
+
+        .search-sm{
+            input{font-size: .7rem; border: none; color: darken($color: $light, $amount: 18); 
+              &:focus{border-bottom: 1px solid darken($color: $light, $amount: 7);}
+            }
+            .search-btn{
+              border: none;
+              color: darken($color: $light, $amount: 24);
+              background: none;
+            }
+          }
+
         .main-categories{
             
             .nav-item{
@@ -128,16 +145,14 @@ header{background: $bg-white;}
 
 // nav bottom
 .nav-bottom{
-  border-top: 1px solid lighten($color: $dark, $amount: 77) !important;
-  border-top: 1px solid $primary !important;
-  height: 3.3rem !important;
-  margin-left: -2.5rem ;
+  border-top: 1px solid lighten($color: $dark, $amount: 60) !important;
+  height: 3.3rem ;
 
   .active{
       border-top: 2px solid $primary;
       padding: .6rem 0rem;
       font-weight: 500;
-      margin-top: -.75rem;
+      margin-top: -.66rem;
       color: $primary !important;
   }
   ul{
@@ -152,6 +167,7 @@ header{background: $bg-white;}
             }
             span{
               font-size: .72rem !important;
+              margin-top: -1px;
             }
           }
       }
@@ -238,31 +254,66 @@ header{background: $bg-white;}
 
 @media (max-width: 992px) {
     .visible-lg{display: none ;}
+
+    // navbar css start
+    .navbar{
+        .offcanvas{
+            // width: 250px;
+
+            .search-sm{
+                input{font-size: .7rem; border: none; color: darken($color: $light, $amount: 18); 
+                &:focus{border-bottom: 1px solid darken($color: $light, $amount: 7);}
+                }
+                .search-btn{
+                border: none;
+                color: darken($color: $light, $amount: 24);
+                background: none;
+                }
+            }
+
+            .main-categories{
+                
+                .nav-item{
+                    font-size: .8rem;
+                    // padding: 12px 0;
+                    .nav-link{
+                        // letter-spacing: 2px;
+                        i{font-size: .7rem; 
+                            position: absolute;
+                            right: 0;
+                            rotate: -90deg;
+                        }
+                    }
+
+                    .sub-categories{
+                        left: 120px;
+                        top: 10px;
+                        padding: .1rem 1rem;
+                        width: 16rem;
+                        
+                        .sub-item{
+                            font-size: .75rem;
+                            // padding: .5rem 0;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .logo-sm{
+            height: 3.5rem;
+            padding: .3rem;
+        }
+
+
+    }
+
+    
 }
 
 
 
-
-
-
-
-
-
-
-// @media (max-width: 576px){
-//   .navbar{
-//     .offcanvas{
-//       .search{
-//         width: 200px;
-//         margin-left: 0%;
-//         margin: 1rem 0;
-//       }
-//       .singin{
-//         margin-top: 1rem;
-//       }
-//     }
-//   }
-// }
 
 @media (max-width: 768px){
     .navbar{
@@ -270,6 +321,54 @@ header{background: $bg-white;}
             height: 3rem;
             padding: .4rem;
         }
+    }
+}
+
+
+@media (max-width: 576px){
+    // navbar css start
+    .navbar{
+        .offcanvas{
+            // width: 250px;
+
+            // .search-sm{
+            //     input{font-size: .7rem; border: none; color: darken($color: $light, $amount: 18); 
+            //     &:focus{border-bottom: 1px solid darken($color: $light, $amount: 7);}
+            //     }
+            //     .search-btn{
+            //     border: none;
+            //     color: darken($color: $light, $amount: 24);
+            //     background: none;
+            //     }
+            // }
+
+            .main-categories{
+                
+                .nav-item{
+                    font-size: .75rem;
+                    padding: 8px 0;
+
+                    .sub-categories{
+                        left: 70px;
+                        padding: .1rem .85rem;
+                        width: 15.5rem;
+                        
+                        .sub-item{
+                            font-size: .72rem;
+                            // padding: .5rem 0;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        // .logo-sm{
+        //     height: 3.5rem;
+        //     padding: .3rem;
+        // }
+
+
     }
 }
 
