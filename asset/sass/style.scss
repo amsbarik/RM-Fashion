@@ -113,8 +113,7 @@
         background: $bg-deep;
         .slide-thum-img{
             width: 100%;
-            height: 100%;
-            // height: 32.4rem;
+            height: 32.4rem;
             object-fit: cover
         }
 
@@ -156,6 +155,16 @@
             }
         }
     }
+    // slider-3items start 
+.slider-3items{
+    .slider-3items-wrap{
+        .slide-thum-img{
+            height: 100%;
+        }
+
+        
+    }
+}
 }
 
 

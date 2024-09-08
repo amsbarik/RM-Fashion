@@ -594,3 +594,22 @@ function updateTotals() {
     document.querySelector('td.text-end').innerText = subtotal;
 }
 
+
+
+
+
+////////////////////////////////////////////
+// products store page js start 
+//  product filter show close js  
+
+document.getElementById('productFilterBtn').addEventListener('click', function() {
+    var filterElement = document.querySelector('.product-filter');
+    filterElement.style.display = 'block';
+});
+
+
+// Close filter on click of filterCloseBtn
+document.getElementById('filterCloseBtn').addEventListener('click', function() {
+    var filterElement = document.querySelector('.product-filter');
+    filterElement.style.display = 'none';
+});
