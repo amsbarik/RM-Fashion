@@ -35,7 +35,7 @@
                 </div>
                 <div class="logo-lg">
                     <a class="" href="index.html" >
-                        <img src="asset/img/rm-fashion-logo.png" class="object-fit-cover logo" style="height: 65px;" alt="logo">
+                        <img src="asset/img/rm-fashion-logo.png" class="object-fit-cover logo" height="100%" alt="logo">
                     </a>
                 </div>
                 <div class="user-items " >
@@ -51,20 +51,9 @@
              </div>
         </div>
          
-        <nav class="navbar navbar-expand-lg  ">
+        <!-- main categories start -->
+        <nav class="navbar navbar-expand-lg py-0 ">
             <div class="container">
-                
-                <!-- <div class="searc ">
-                    <form action="" role="search">
-                        <div class="input-group ">
-                        <input type="search" placeholder="Search" aria-label="Search" class="form-control"  aria-describedby="search-btn">
-                        <button class="btn btn-outline-secondary" type="button" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                    </form>
-                </div> -->
-
-                
-                
 
                 <button  class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -72,25 +61,99 @@
 
                 <div class="hidden-lg">
                     <a class="navbar-brand " href="index.html" >
-                        <img src="asset/img/rm-fashion-logo.png" class="object-fit-cover logo" style="height: 65px;" alt="logo">
+                        <img src="asset/img/rm-fashion-logo.png" class="object-fit-cover logo-sm" alt="logo">
                     </a>
                 </div>
 
-                <div class="hidden-lg"><a href="#"><i class="fa-regular fa-user"></i></a></div>
+                <div class="hidden-lg"><a href="#" class="user-sm"><i class="fa-regular fa-user"></i></a></div>
                 
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
-                        
-                        <ul class="navbar-nav justify-content-center  flex-grow-1 ">
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
+                    <div class="offcanvas-body overflow-visible">
+
+                        <div class="search-sm align-self-center" >
+                            <form action="" role="search">
+                                <div class="input-group ">
+                                    <input type="search" placeholder="Search for products..." aria-label="Search" class="form-control rounded-0 "  aria-describedby="search-btn">
+                                    <button class="btn search-btn" type="button" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                                
+                        <!-- main categories  -->
+                        <ul class="navbar-nav main-categories justify-content-center flex-grow-1 p-0 m-0">
+
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#"> Home </a>
+                                
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#"> Panjabi <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long Panjabi</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short Panjabi</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium panjabi</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#"> t-shirt <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">short sleep</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">long sleep</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">casual</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">formal</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#"> Polo shirt <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long polo</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short polo</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium polo</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#">  shirt <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium shirt</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#">  shoe <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium shirt</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#">  Boxer <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium shirt</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#">  Winter <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium shirt</a></li>
+                                </ul>
+                            </li>
                         
                         </ul>
                     </div>
@@ -106,19 +169,19 @@
                 <div class=" " >
                     <ul class="d-flex justify-content-between " >
                         <li class="nav-item">
-                        <a class="nav-link nav-link-sm text-center active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i><span class="d-block">Home</span></a>
+                            <a class="nav-link nav-link-sm text-center active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i><span class="d-block">Home</span></a>
                         </li>
                         <li class="nav-item text-center">
-                        <a class="nav-link nav-link-sm" href="#"><i class="fa-solid fa-bars"></i><span class="d-block">Category</span></a>
+                            <a class="nav-link nav-link-sm" href="#"><i class="fa-solid fa-bars"></i><span class="d-block">Category</span></a>
                         </li>
                         <li class="nav-item text-center">
-                        <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="d-block">Search</span></a>
+                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="d-block">Search</span></a>
                         </li>
                         <li class="nav-item text-center">
-                        <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-cart-shopping"></i><span class="d-block">Cart</span></a>
+                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-cart-shopping"></i><span class="d-block">Cart</span></a>
                         </li>
                         <li class="nav-item text-center">
-                        <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-heart"></i><span class="d-block">Wichlist</span></a>
+                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-heart"></i><span class="d-block">Wichlist</span></a>
                         </li>
                     </ul>
                 </div>
@@ -134,12 +197,12 @@
     <!-- main content start -->
     <main>
         <div class="signup-form ">
-            <div class="container">
+            <div class="container px-4 px-sm-0">
                 <div class="form-wrap d-flex justify-content-center align-items-center">
                     <div>
                         <h3 class="text-center mt-5">Sign Up</h3>
 
-                        <form action="" class="mt-5 " style="width: 24rem;">
+                        <form action="" class="mt-5 " >
                             <div class="mb-3">
                             <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="name" placeholder="Enter Your Name" aria-describedby="nameHelp" required>
