@@ -32,7 +32,7 @@
                 </div>
                 <div class="logo-lg">
                     <a class="" href="index.html" >
-                        <img src="asset/img/rm-fashion-logo.png" class="object-fit-cover logo" style="height: 65px;" alt="logo">
+                        <img src="asset/img/rm-fashion-logo.png" class="object-fit-cover logo" height="100%" alt="logo">
                     </a>
                 </div>
                 <div class="user-items " >
@@ -48,20 +48,9 @@
              </div>
         </div>
          
-        <nav class="navbar navbar-expand-lg  ">
+        <!-- main categories start -->
+        <nav class="navbar navbar-expand-lg py-0 ">
             <div class="container">
-                
-                <!-- <div class="searc ">
-                    <form action="" role="search">
-                        <div class="input-group ">
-                        <input type="search" placeholder="Search" aria-label="Search" class="form-control"  aria-describedby="search-btn">
-                        <button class="btn btn-outline-secondary" type="button" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                    </form>
-                </div> -->
-
-                
-                
 
                 <button  class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -69,25 +58,99 @@
 
                 <div class="hidden-lg">
                     <a class="navbar-brand " href="index.html" >
-                        <img src="asset/img/rm-fashion-logo.png" class="object-fit-cover logo" style="height: 65px;" alt="logo">
+                        <img src="asset/img/rm-fashion-logo.png" class="object-fit-cover logo-sm" alt="logo">
                     </a>
                 </div>
 
-                <div class="hidden-lg"><a href="#"><i class="fa-regular fa-user"></i></a></div>
+                <div class="hidden-lg"><a href="#" class="user-sm"><i class="fa-regular fa-user"></i></a></div>
                 
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
-                        
-                        <ul class="navbar-nav justify-content-center  flex-grow-1 ">
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
-                            <li class="nav-item"><a class="nav-link " aria-current="page" href="#">Menu Item</a></li>
+                    <div class="offcanvas-body overflow-visible">
+
+                        <div class="search-sm align-self-center" >
+                            <form action="" role="search">
+                                <div class="input-group ">
+                                    <input type="search" placeholder="Search for products..." aria-label="Search" class="form-control rounded-0 "  aria-describedby="search-btn">
+                                    <button class="btn search-btn" type="button" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                                
+                        <!-- main categories  -->
+                        <ul class="navbar-nav main-categories justify-content-center flex-grow-1 p-0 m-0">
+
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#"> Home </a>
+                                
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#"> Panjabi <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long Panjabi</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short Panjabi</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium panjabi</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#"> t-shirt <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">short sleep</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">long sleep</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">casual</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">formal</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#"> Polo shirt <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long polo</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short polo</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium polo</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#">  shirt <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium shirt</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#">  shoe <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium shirt</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#">  Boxer <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium shirt</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
+                                <a class="nav-link text-uppercase p-0" aria-current="page" href="#">  Winter <i class="fa-solid fa-angle-down"></i></a>
+                                <!-- sub category start  -->
+                                <ul class="sub-categories">
+                                    <li class="sub-item" data-bs-dismiss="offcanvas" ><a href="#" class="text-uppercase ">Long shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">short shirt</a></li>
+                                    <li class="sub-item" data-bs-dismiss="offcanvas"><a href="#" class="text-uppercase ">Premium shirt</a></li>
+                                </ul>
+                            </li>
                         
                         </ul>
                     </div>
@@ -103,19 +166,19 @@
                 <div class=" " >
                     <ul class="d-flex justify-content-between " >
                         <li class="nav-item">
-                        <a class="nav-link nav-link-sm text-center active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i><span class="d-block">Home</span></a>
+                            <a class="nav-link nav-link-sm text-center active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i><span class="d-block">Home</span></a>
                         </li>
                         <li class="nav-item text-center">
-                        <a class="nav-link nav-link-sm" href="#"><i class="fa-solid fa-bars"></i><span class="d-block">Category</span></a>
+                            <a class="nav-link nav-link-sm" href="#"><i class="fa-solid fa-bars"></i><span class="d-block">Category</span></a>
                         </li>
                         <li class="nav-item text-center">
-                        <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="d-block">Search</span></a>
+                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="d-block">Search</span></a>
                         </li>
                         <li class="nav-item text-center">
-                        <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-cart-shopping"></i><span class="d-block">Cart</span></a>
+                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-cart-shopping"></i><span class="d-block">Cart</span></a>
                         </li>
                         <li class="nav-item text-center">
-                        <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-heart"></i><span class="d-block">Wichlist</span></a>
+                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-heart"></i><span class="d-block">Wichlist</span></a>
                         </li>
                     </ul>
                 </div>
@@ -127,6 +190,95 @@
     </header>
     <!--Main Navigation end-->
 
+    <!-- order-cart start -->
+    <div class="order-cart-container">
+        
+        <div id="orderCartWrap" class="order-cart-wrap">
+            <form action="">
+                <div  class="order-cart rounded-start-4 overflow-hidden z-3">
+                    <div class="cart-top p-3 d-flex justify-content-between align-items-center mb-2" >
+                        <div class="d-flex align-items-center">
+                            <img src="asset/img/shopping-icon.png" alt="">
+                            <h5 class="card-title ms-3"> 2 Items</h5>
+                        </div>
+                        <button class="btn p-0 close-btn" onclick="closeOrderCart()" role="button">Close</button>
+                    </div>
+    
+                    <!-- product items start1 -->
+                    <div class="cart-item d-flex justify-content-between ">
+                        <!-- qty plus minus  -->
+                        <div class="qty-layout align-items-center text-center " style="min-width: 42px;">
+                            <button class="btn cart-plus text-dark" id="increaseBtn"><i class="fa-solid fa-sort-up"></i></button>
+                            <input type="cart-input text" id="qtyInput" class="form-control p-0 cart-input text-center border-0" value="1" readonly>
+                            <button class="btn cart-minus text-dark" id="decreaseBtn"><i class="fa-solid fa-sort-down"></i></button>
+                        </div>
+    
+                        <div class="card border-0 " >
+                            <div class="row g-0">
+                              <div class="col-3">
+                                <img src="asset/img/product1.jpeg" class=" object-fit-cover" width="100%" height="100%" alt="...">
+                              </div>
+                              <div class="col-9">
+                                <div class="card-body py-0">
+                                  <h5 class="card-title m-0">ELITE Quality Printed Panjabi I MP-193</h5>
+                                  <p class="price m-0 p-0"><small class="text-dark">TK. 2950 <span class="text-danger text-decoration-line-through">TK. 2990</span></small></p>
+                                  <p class="card-text m-0 p-0" style="margin-top: -5px !important;"><small class="text-body-secondary">Size: 39, Color: Black </small></p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+    
+                        <button class="btn p-0 pe-3 text-danger btn-delete" >&#10005;</button>
+                    </div>
+                    <!-- product items end -->
+    
+                    <!-- product items start2 -->
+                    <div class="cart-item d-flex justify-content-between ">
+                        <!-- qty plus minus  -->
+                        <div class="qty-layout align-items-center text-center " style="min-width: 42px;">
+                            <button class="btn cart-plus text-dark" id="increaseBtn"><i class="fa-solid fa-sort-up"></i></button>
+                            <input type="cart-input text" id="qtyInput" class="form-control p-0 cart-input text-center border-0" value="1" readonly>
+                            <button class="btn cart-minus text-dark" id="decreaseBtn"><i class="fa-solid fa-sort-down"></i></button>
+                        </div>
+    
+                        <div class="card border-0 " >
+                            <div class="row g-0">
+                              <div class="col-3">
+                                <img src="asset/img/product1.jpeg" class=" object-fit-cover" width="100%" height="100%" alt="...">
+                              </div>
+                              <div class="col-9">
+                                <div class="card-body py-0">
+                                  <h5 class="card-title m-0">ELITE Quality Printed Panjabi I MP-193</h5>
+                                  <p class="price m-0 p-0"><small class="text-dark">TK. 2950 <span class="text-danger text-decoration-line-through">TK. 2990</span></small></p>
+                                  <p class="card-text m-0 p-0" style="margin-top: -5px !important;"><small class="text-body-secondary">Size: 39, Color: Black </small></p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+    
+                        <button class="btn p-0 pe-3 text-danger btn-delete" >&#10005;</button>
+                    </div>
+                    <!-- product items end -->
+
+                    <div class="cart-btn rounded-2 overflow-hidden" onclick="closeOrderCart()" role="button" type="submit"><span class="btn-order rounded-start">Place Order</span> <span class="btn-order rounded-end" style="margin-left: -6px;"><i class="fa-solid fa-bangladeshi-taka-sign me-1"></i> 2700</span></div>
+    
+                </div>
+            </form>
+        </div>
+
+        
+
+        <!-- order card box start  -->
+        <div class="order-cart-box position-fixed z-3" onclick="showOrderCart()" role="button">
+            <div class="text-center">
+                <img src="asset/img/shopping-icon.png" alt="">
+                <h5 class="m-0 px-2">5 items</h5>
+            </div>
+            <h6 class="text-center px-2 m-0"><i class="fa-solid fa-bangladeshi-taka-sign me-1"></i> 2700</h6>
+        </div>
+    </div>
+    <!-- order-cart end -->
+
 
     <!-- main content start -->
     <main>
@@ -135,15 +287,17 @@
                 <div class="checkout-wrap">
                     <h2 class="heading">Checkout</h2>
                     <hr>
-                    <div class="d-flex">
+                    <div class="d-lg-flex social-login">
                         <p class="me-4 text-muted">Returning customer? <button class="btn link p-0"> Click here to login</button></p>
-                        <div class="social-login-btn rounded me-3 facebook"> <i class="fa-brands fa-facebook"></i><span class=" text-center"> Login with Facebook</span></div>
-                        <div class="social-login-btn rounded youtube"><i class="fa-brands fa-google"></i><span class=" text-center"> Login with Google</span></div>
+                        <div class="d-flex mt-3 mt-lg-0">
+                            <div class="social-login-btn rounded me-2 me-sm-3 facebook"> <i class="fa-brands fa-facebook"></i><span class=" text-center"> Login with Facebook</span></div>
+                            <div class="social-login-btn rounded youtube"><i class="fa-brands fa-google"></i><span class=" text-center"> Login with Google</span></div>
+                        </div>
                     </div>
 
                     <!-- DELIVERY & BILLING INFO  -->
                     <form action="" class="row mt-4">
-                        <div class="col-8">
+                        <div class="col-lg-8">
                             <h3 class="sub-heading">DELIVERY & BILLING INFO</h3>
                             <hr>
 
@@ -185,16 +339,18 @@
                             </div>
 
                             <h3 class="sub-heading mt-4">Payment Method</h3>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="cash-delivery" id="cash-delivery" checked>
-                                <label class="form-check-label" for="cash-delivery">Cash On Delivery</label>
+                            <div class="d-flex d-lg-block">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cash-delivery" id="cash-delivery" checked>
+                                    <label class="form-check-label" for="cash-delivery">Cash On Delivery</label>
+                                </div>
+                                <img src="asset/img/cash-delivery.png" class="cash-delivery-img ms-5 ms-lg-0" class="ms-4 mt-2" alt="">
                             </div>
-                            <img src="asset/img/cash-delivery.png" class="ms-4 mt-2" alt="">
 
                         </div>
 
                         <!-- order summary  -->
-                        <div class="col-4 order-summary">
+                        <div class="col-lg-4 order-summary">
                             <h3 class="sub-heading">ORDER OVERVIEW</h3>
                             <hr>
                             <div class="table-responsive">
@@ -211,10 +367,10 @@
                                         <td colspan="2">
                                             <div class="card border-0 mb-3" style="max-width: 540px;">
                                                 <div class="row g-0">
-                                                  <div class="col-md-3">
+                                                  <div class="col-3">
                                                     <img src="asset/img/product1.jpeg" class="rounded-start object-fit-cover" width="100%" height="100%" alt="...">
                                                   </div>
-                                                  <div class="col-md-9">
+                                                  <div class="col-9">
                                                     <div class="card-body py-0">
                                                       <h5 class="card-title m-0">Premium Quality Genuine Leather Half Shoe for Men । MLS-11</h5>
                                                       <p class="price m-0 p-0"><small class="text-dark">TK. 2950 <span class="text-danger text-decoration-line-through">TK. 2990</span></small></p>
@@ -225,10 +381,10 @@
                                             </div>
                                             <div class="card border-0 mb-3" style="max-width: 540px;">
                                                 <div class="row g-0">
-                                                  <div class="col-md-3">
+                                                  <div class="col-3">
                                                     <img src="asset/img/product1.jpeg" class="rounded-start object-fit-cover" width="100%" height="100%" alt="...">
                                                   </div>
-                                                  <div class="col-md-9">
+                                                  <div class="col-9">
                                                     <div class="card-body py-0">
                                                       <h5 class="card-title m-0">Premium Quality Genuine Leather Half Shoe for Men । MLS-11</h5>
                                                       <p class="price m-0 p-0"><small class="text-dark">TK. 2950 <span class="text-danger text-decoration-line-through">TK. 2990</span></small></p>
@@ -264,14 +420,14 @@
                                     <div class="d-flex mt-2">
                                         <div><input type="text" class="form-control py-1" id="coupon-code" placeholder="Enter the code"></div>
                                         <div class="col-auto">
-                                            <button type="submit" class="btn btn-primary py-1 rounded-2 ms-3" style="font-size: .875rem;">Apply</button>
+                                            <button type="submit" class="btn btn-primary apply py-1 rounded-2 ms-3" style="font-size: .875rem;">Apply</button>
                                         </div>
                                     </div>
                                 </div>
                                 
                             </form>
 
-                            <button class="btn btn-primary mt-5" style="width: 100%;">Place Order</button>
+                            <button class="btn btn-primary order-btn mt-5" style="width: 100%;">Place Order</button>
                         </div>
                     </form>
                 </div>
@@ -286,7 +442,7 @@
     <footer class="footer py-4">
         <div class="container">
             <div class="footer-wrap">
-                <div class="row g-5 row-cols-2 row-cols-lg-4 mb-4">
+                <div class="row g-4 g-xl-5 row-cols-2 row-cols-lg-4 mb-4">
                     <div class="col">
                         <img src="asset/img/rm-fashion-logo.png" class="logo" alt="...">
                         <a href="tel: +880 17110000000" class="mobile d-block mt-3">
@@ -324,7 +480,7 @@
                     </div>
 
                     <div class="col">
-                        <img src="asset/img/fb-link.jpg" class="photo-link" alt="...">
+                        <img src="asset/img/fb-link.jpg" class="photo-link"   alt="...">
                     </div>
                 </div>
 
@@ -337,7 +493,6 @@
         </div>
     </footer>
     <!-- footer end -->
-
 
 
 
